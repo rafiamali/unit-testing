@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TestingBcp.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;TestingBcp&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">testingbcp</a> &gt; <span class="el_source">TestingBcp.java</span></div><h1>TestingBcp.java</h1><pre class="source lang-java linenums">package testingbcp;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+<span class="nc" id="L8">public class TestingBcp {</span>
+<span class="fc" id="L9">    public static String FILE_PATH = &quot;data_pendaftaran.txt&quot;;</span>
+<span class="fc" id="L10">    public static Scanner scanner = new Scanner(System.in);  // Static scanner, tidak perlu di-passing</span>
+<span class="fc" id="L11">    static int counter = 0;</span>
+    
+    public static String inputNama() {  // Tidak perlu parameter scanner lagi
+<span class="fc" id="L14">        System.out.print(&quot;Silahkan masukkan nama Anda : &quot;);</span>
+<span class="pc bpc" id="L15" title="1 of 2 branches missed.">        if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L16">            String input = scanner.nextLine();</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            return input.equals(&quot;0&quot;) ? null : input;</span>
+        }
+<span class="nc" id="L19">        return null;</span>
+    }
+
+    public static String inputJenjangSekolah() {
+        String jenjang;
+        while (true) {
+<span class="fc" id="L25">            System.out.print(&quot;Silahkan masukkan jenjang sekolah Anda (SD/SMP/SMA): &quot;);</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L27">                jenjang = scanner.nextLine();</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">                if (jenjang.equalsIgnoreCase(&quot;SD&quot;) ||</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                    jenjang.equalsIgnoreCase(&quot;SMP&quot;) ||</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                    jenjang.equalsIgnoreCase(&quot;SMA&quot;)) {</span>
+<span class="fc" id="L31">                    return jenjang; </span>
+                } else {
+<span class="fc" id="L33">                    System.out.println(&quot;Error: Jenjang sekolah harus SD, SMP, atau SMA.&quot;);</span>
+                }
+            }
+<span class="fc" id="L36">            counter++;  </span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (counter &gt; 3) {  </span>
+<span class="fc" id="L38">                System.out.println(&quot;Loop dihentikan karena terlalu banyak iterasi.&quot;);</span>
+<span class="fc" id="L39">                return null; </span>
+            }
+        }
+        
+    }
+
+    public static String inputNoHp() {
+        String noHp;
+<span class="fc" id="L47">        int counter = 0;  </span>
+
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        while (counter &lt; 3) {  </span>
+<span class="fc" id="L50">            System.out.print(&quot;Silahkan masukkan nomor handphone Anda (harus diawali dengan 62): &quot;);</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">            if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L52">                noHp = scanner.nextLine();</span>
+
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                if (noHp.equals(&quot;0&quot;)) {</span>
+<span class="fc" id="L55">                    return null; </span>
+                }
+
+<span class="pc bpc" id="L58" title="1 of 4 branches missed.">                if (noHp.startsWith(&quot;62&quot;) &amp;&amp; noHp.matches(&quot;\\d+&quot;)) {</span>
+<span class="fc" id="L59">                    return noHp;</span>
+                } else {
+<span class="fc" id="L61">                    System.out.println(&quot;Error: Nomor handphone harus diawali dengan 62 dan berupa angka.&quot;);</span>
+                }
+            }
+        }
+<span class="nc" id="L65">        return null;</span>
+    }
+
+    public static String inputAlamat() {
+<span class="fc" id="L69">        System.out.print(&quot;Silahkan masukkan alamat Anda (atau ketik 0 untuk keluar): &quot;);</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L71">            String alamat = scanner.nextLine();</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">            return alamat.equals(&quot;0&quot;) ? null : alamat;</span>
+        }
+<span class="nc" id="L74">        return null;</span>
+    }
+
+    public static String inputEmail() {
+        String email;
+        while (true) {
+<span class="fc" id="L80">            System.out.print(&quot;Silahkan masukkan email Anda (harus menggunakan domain @gmail.com): &quot;);</span>
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">            if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L82">                email = scanner.nextLine();</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">                if (email.equals(&quot;0&quot;)) return null;</span>
+
+<span class="fc bfc" id="L85" title="All 2 branches covered.">                if (email.endsWith(&quot;@gmail.com&quot;)) {</span>
+<span class="fc" id="L86">                    return email;</span>
+                } else {
+<span class="fc" id="L88">                    System.out.println(&quot;Error: Email harus menggunakan domain @gmail.com.&quot;);</span>
+                }
+            }
+<span class="fc" id="L91">            counter++;  </span>
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">            if (counter &gt; 3) {  </span>
+<span class="nc" id="L93">                System.out.println(&quot;Loop dihentikan karena terlalu banyak iterasi.&quot;);</span>
+<span class="nc" id="L94">                return null; </span>
+            }
+        }
+    }
+
+    public static String inputTempatTanggalLahir() {
+<span class="fc" id="L100">        System.out.print(&quot;Silahkan masukkan tempat dan tanggal lahir Anda (format: Kota, DD-MM-YYYY): &quot;);</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">        if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L102">            String input = scanner.nextLine();</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">            return input.equals(&quot;0&quot;) ? null : input;</span>
+        }
+<span class="nc" id="L105">        return null;</span>
+    }
+
+    public static String inputNik() {
+        String nik;
+        while (true) {
+<span class="fc" id="L111">            System.out.print(&quot;Silahkan masukkan NIK Anda (16 digit): &quot;);</span>
+<span class="pc bpc" id="L112" title="1 of 2 branches missed.">            if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L113">                nik = scanner.nextLine();</span>
+
+<span class="fc bfc" id="L115" title="All 2 branches covered.">                if (nik.equals(&quot;0&quot;)) return null;</span>
+
+<span class="pc bpc" id="L117" title="1 of 4 branches missed.">                if (nik.length() == 16 &amp;&amp; nik.matches(&quot;\\d+&quot;)) {</span>
+<span class="fc" id="L118">                    return nik;</span>
+                } else {
+<span class="fc" id="L120">                    System.out.println(&quot;Error: NIK harus 16 digit dan berupa angka.&quot;);</span>
+                }
+            }
+
+<span class="fc" id="L124">            counter++;</span>
+<span class="pc bpc" id="L125" title="1 of 2 branches missed.">            if (counter &gt; 3) {</span>
+<span class="nc" id="L126">                System.out.println(&quot;Loop dihentikan karena terlalu banyak iterasi.&quot;);</span>
+<span class="nc" id="L127">                break;</span>
+            }
+        }
+<span class="nc" id="L130">        return null;</span>
+    }
+
+    public static String inputMataPelajaran() {
+        String mataPelajaran;
+        while (true) {
+<span class="fc" id="L136">            System.out.print(&quot;Silahkan masukkan mata pelajaran (Matematika/Sains/Bahasa Inggris): &quot;);</span>
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">            if (scanner.hasNextLine()) {</span>
+<span class="fc" id="L138">                mataPelajaran = scanner.nextLine();</span>
+<span class="fc bfc" id="L139" title="All 2 branches covered.">                if (mataPelajaran.equals(&quot;0&quot;)) return null;</span>
+
+<span class="fc bfc" id="L141" title="All 2 branches covered.">                if (mataPelajaran.equalsIgnoreCase(&quot;Matematika&quot;) || </span>
+<span class="fc bfc" id="L142" title="All 2 branches covered.">                    mataPelajaran.equalsIgnoreCase(&quot;Sains&quot;) || </span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">                    mataPelajaran.equalsIgnoreCase(&quot;Bahasa Inggris&quot;)) {</span>
+<span class="fc" id="L144">                    return mataPelajaran;</span>
+                } else {
+<span class="fc" id="L146">                    System.out.println(&quot;Error: Mata pelajaran harus Matematika, Sains, atau Bahasa Inggris.&quot;);</span>
+                }
+            }
+<span class="fc" id="L149">            counter++;  </span>
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">            if (counter &gt; 3) {  </span>
+<span class="fc" id="L151">                System.out.println(&quot;Loop dihentikan karena terlalu banyak iterasi.&quot;);</span>
+<span class="fc" id="L152">                return null; </span>
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+<span class="fc" id="L158">        System.out.println(&quot;Program Pendaftaran Kursus (tekan 0 untuk keluar)&quot;);</span>
+<span class="fc" id="L159">        System.out.println(&quot;-------------------------------------------&quot;);</span>
+<span class="fc" id="L160">        System.out.println(&quot;Identitas Siswa&quot;);</span>
+
+<span class="fc" id="L162">        String nama = inputNama();</span>
+<span class="pc bpc" id="L163" title="1 of 2 branches missed.">        if (nama == null) return;</span>
+
+<span class="fc" id="L165">        String jenjang = inputJenjangSekolah();</span>
+<span class="pc bpc" id="L166" title="1 of 2 branches missed.">        if (jenjang == null) return;</span>
+
+<span class="fc" id="L168">        String nomorHp = inputNoHp();</span>
+<span class="pc bpc" id="L169" title="1 of 2 branches missed.">        if (nomorHp == null) return;</span>
+
+<span class="fc" id="L171">        String alamat = inputAlamat();</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">        if (alamat == null) return;</span>
+
+<span class="fc" id="L174">        String email = inputEmail();</span>
+<span class="pc bpc" id="L175" title="1 of 2 branches missed.">        if (email == null) return;</span>
+
+<span class="fc" id="L177">        String ttl = inputTempatTanggalLahir();</span>
+<span class="pc bpc" id="L178" title="1 of 2 branches missed.">        if (ttl == null) return;</span>
+
+<span class="fc" id="L180">        String nik = inputNik();</span>
+<span class="pc bpc" id="L181" title="1 of 2 branches missed.">        if (nik == null) return;</span>
+
+<span class="fc" id="L183">        String pelajaran = inputMataPelajaran();</span>
+<span class="pc bpc" id="L184" title="1 of 2 branches missed.">        if (pelajaran == null) return;</span>
+
+<span class="fc" id="L186">        simpanKeFile(nama, jenjang, nomorHp, alamat, email, ttl, nik, pelajaran);</span>
+
+        // JadwalDanPembayaran.simpan(pelajaran);  // Pastikan kelas ini diimplementasikan atau hapus jika tidak ada
+<span class="nc" id="L189">        JadwalDanPembayaran.simpan(pelajaran);</span>
+<span class="nc" id="L190">    }</span>
+
+    public static void simpanKeFile(String nama, String jenjang, String nomorHp, String alamat, String email, String ttl, String nik, String pelajaran) {
+<span class="pc" id="L193">        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {</span>
+<span class="fc" id="L194">            writer.write(nama + &quot;,&quot; + jenjang + &quot;,&quot; + nomorHp + &quot;,&quot; + alamat + &quot;,&quot; + email + &quot;,&quot; + ttl + &quot;,&quot; + nik + &quot;,&quot; + pelajaran);</span>
+<span class="fc" id="L195">            writer.newLine();</span>
+<span class="fc" id="L196">            System.out.println(&quot;Data berhasil disimpan ke file!&quot;);</span>
+<span class="pc bpc" id="L197" title="6 of 8 branches missed.">        } catch (IOException e) {</span>
+<span class="nc" id="L198">            System.out.println(&quot;Error: Gagal menyimpan data ke file.&quot;);</span>
+<span class="nc" id="L199">            e.printStackTrace();</span>
+<span class="fc" id="L200">        }</span>
+<span class="fc" id="L201">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -1,0 +1,38 @@
+ammar,sd,62871298,gang jalan,ammar@gmail.com,bekasi, 20-12-2002,1234567890123456,sains
+ammar,sma,62347843,gang bagus,AMMAR@gmail.com,ojakarat, 10-12-2005,1234567890123456,bahasa inggris
+hakim,smp,6245345,gang raya,pake@gmail.com,jakarta, 27-11-2004,1234567890123456,sains
+ammar,sma,62587676,rumah,aku@gmail.com,bekasi, 30-12-2005,1234567890123456,sains
+John Doe,SMA,081234567890,Jl. Merdeka No. 10,johndoe@example.com,Bandung, 1 Januari 2000,3201234567890001,Matematika
+ammar,sd,6278686,gang elang,kepo@gmail.com,jakarta, 20-12-2002,1234567890098765,bahasa inggris
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+ammar,sma,6212345678,gang elang,saya@gmail.com,bekasi, 20-11-2004,1234567890123456,sains
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
+John Doe,SMA,6281234567890,123 Main St,johndoe@gmail.com,Jakarta, 01-01-2000,1234567890123456,Matematika
