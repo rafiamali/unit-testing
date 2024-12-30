@@ -30,6 +30,7 @@ public class JadwalDanPembayaran {
         scanner.nextLine(); // Clear input buffer
         String jam = "";
 
+        //nentuin jam
         switch (pilihanJam) {
             case 1:
                 jam = "08:00-10:00";
