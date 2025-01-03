@@ -53,6 +53,7 @@ public class JadwalDanPembayaranTest {
     }
 }
 
+    //bagian testing
     @Test
     public void testInputNamaKelasNotNull() {
         System.out.println("Test input nama kelas not null");
